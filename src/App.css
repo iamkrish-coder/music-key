@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {   
+    font-family: "theboldfont";   
+    src: url(./fonts/theboldfont.ttf) 
+    format('truetype'); 
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body, html {
+    margin: 0;
+    height: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+h1 {
+    font-size: 128px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.header-section {
+    font-family: theboldfont;
+    padding: 15px 15px;
+    text-align: left;
+}
+
+.header-icons {
+    width: 200px;
+    text-align:center;
+}
+
+.container {
+    background-image: url("./images/composition-10.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wrapper {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+}
+
+.key {
+    background: #000;
+    color: #6EE8FF;
+    padding: 2%;
+    margin: 0 10px; 
+    opacity: 0.8;
+    text-align: center; 
+    border: 5px solid #000;
+    width:100%;
+}
+
+kbd {
+    display: block;
+    font-size: 3rem;
   }
+  
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+}
+
+.key:hover {
+    background: #ffc600;
+    color: #000;
+    transform: scale(1.2);
+    animation-name: pop;
+    animation-duration: 2s;
+    opacity: 0.9;
+}
+
+.playing {
+    transform: scale(1.2);
+}
+
+.key:hover > .sound {
+    color: #000;
+}
+
+@keyframes pop {
+    from {background-color: #ffc600;}
+    to {background-color: #D0FAFF;}
 }
